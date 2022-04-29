@@ -1,0 +1,29 @@
+{
+  "name": "express_sequelize_server",
+  "version": "1.0.0",
+  "description": "Express and Sequelize",
+  "scripts": {
+    "start": "npm run init-db && npx nodemon --exec babel-node server.js",
+    "sequelize-skeleton": "npx sequelize init:models; npx sequelize init:config",
+    "init-db": "cd ../../../../../opt/homebrew/bin/ &&  echo 'DROP DATABASE IF EXISTS db_express_sequelize_server; CREATE DATABASE db_express_sequelize_server CHARACTER SET utf8 COLLATE utf8_general_ci' | ./mysql -u root && cd -"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "lodash.random": "^3.2.0",
+    "lodash.times": "^4.3.2",
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1"
+  }
+}
